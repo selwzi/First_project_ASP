@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+
+<div class = "text-center"> 
+    <h1>Форма ввода</h1>
+</div>
+
+<div class="box col-md-12">
+    <form asp-action="Index" asp-controller="User" method="post">
+        <div asp-validation-summary="All" style="font-size:23px; font-family:Impact" class="text-danger text-center"></div>
+
+        <div class="mb-3">
+        <label class="form-label">LastName</label>
+        <input type="text" asp-for="LastName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+        <label class="form-label">FirstName</label>
+        <input type="text" asp-for="FirstName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+        <label class="form-label">MiddleName</label>
+        <input type="text" asp-for="MiddleName" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+        <label class="form-label">BirthDate</label>
+        <input type="date" asp-for="BirthDate" class="form-control" />
+        </div>
+
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+
+    </form>
+</div>
+
+
